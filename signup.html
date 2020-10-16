@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="./authentication.js"></script>
+</head>
+<body>
+    <div id="formContainer">
+            <div id="header"><h1>sign Up page</h1> </div>
+            <div id="values"><label for="email">E-mail</label><input type="email" placeholder="email" id="email"></div>
+            <div id="values"><label for="password">Password</label> <input type="password" placeholder="password" id="password"></div>
+            <button onclick = "signUp()" id="signUp">signUp</button>
+            <div>if you have an account with us, click the sign in button to log into your account.</div>        
+            <div><button onclick="location.href = './signin.html';">Sign In</button></div>
+    </div>
+
+
+    
+</body>
+</html>

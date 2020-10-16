@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: ghostwhite;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+#formContainer{
+    width: 500px;
+    height: 300px;
+    background: #0096c7;
+    margin-top: 150px;
+    margin-left: 300px;
+    padding: 20px;
+    
+    border-radius: 20px;
+}
+label{
+    color: white;
+    float: left;
+    width: 100px;
+    padding-right: 20px;
+    width: 100px;
+}
+#values{
+    padding-bottom: 20px;
+}
+#header{
+    margin-bottom: 20px;
+    color: white;
+}
+button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: blue;
+    margin-left: 300px;
+
+}
+#signout{
+    color: white;
+}
