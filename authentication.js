@@ -34,7 +34,7 @@
 }
 function signOut() {
     auth.signOut();
-    window.location = "./signin.html";
+    window.location = "./index.html";
     
 }
 
