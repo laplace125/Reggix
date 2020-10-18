@@ -17,38 +17,82 @@
   const auth = firebase.auth();
 
   function signUp() {
-      var email = document.getElementById("email");
-      var password = document.getElementById("password");
-      const promise = auth.createUserWithEmailAndPassword(email.value , password.value);
-      promise.catch(e => alert(e.message));
-      window.location = "./loggedIn.html";
-      alert("SignedUp");
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    if (email.length < 4) {
+      alert('Please enter an email address.');
+      return;
+    }
+    if (password.length < 4) {
+      alert('Please enter a password.');
+      return;
+    }
+    // Create user with email and pass.
+    // [START createwithemail]
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(userCredential => {
+        alert("User " + userCredential.user.uid + " LOGGED IN");
+        window.location = 'loggedIn.html';
+     }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // [START_EXCLUDE]
+      if (errorCode == 'auth/weak-password') {
+        alert('The password is too weak.');
+      } else {
+        alert(errorMessage);
+      }
+      console.log(error);
+      // [END_EXCLUDE]
+    });
+    
+    // [END createwithemail]
   }
 
+
+
+
+//start signin of existing users
   function signIn() {
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
-    const promise = auth.signInWithEmailAndPassword(email.value , password.value);
-    promise.catch(e => alert(e.message));
-    window.location = "./loggedIn.html";
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;  
+    
+    firebase.auth().signInWithEmailAndPassword(email, password).then(userCredential => {
+        window.location = "loggedIn.html";
+        alert("Hello " + userCredential.user);
+        console.log(userCredential.user.uid);
+    } ).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode === 'auth/wrong-password') {
+          alert('Wrong password.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        console.log(userCredential.user.uid);
+        
+        // [END_EXCLUDE]
+    });
 }
+
+    //end  Sign in existing user
+
+
 function signOut() {
     auth.signOut();
     window.location = "./index.html";
-    
+    alert("Signed OUt"); 
 }
 
 
-firebase.auth().onAuthStateChanged(function(user) {
-
-        if(user){
-            var email = user.email;
-            alert(email.value);
-        }else{
-              
-        }
-
-    })
 
 
-    
+
+
+
+
+
+   
