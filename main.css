@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     background: ghostwhite;
     font-size: 1.2rem;
     line-height: 1.4rem;
+    font-family: 'Nunito', sans-serif;
+    color: whitesmoke;
 }
 
 #formContainer{
