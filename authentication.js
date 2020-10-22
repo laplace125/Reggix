@@ -59,7 +59,7 @@
     
     firebase.auth().signInWithEmailAndPassword(email, password).then(userCredential => {
         window.location = "loggedIn.html";
-        alert("Hello " + userCredential.user);
+        alert("Hello " + userCredential.user.uid);
         console.log(userCredential.user.uid);
     } ).catch(function(error) {
         // Handle Errors here.
@@ -72,7 +72,7 @@
           alert(errorMessage);
         }
         console.log(error);
-        console.log(userCredential.user.uid);
+        
         
         // [END_EXCLUDE]
     });

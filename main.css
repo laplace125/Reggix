@@ -5,44 +5,141 @@
     
 }
 body{
-    background: ghostwhite;
+    
     font-size: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 2.5rem;
     font-family: 'Nunito', sans-serif;
-    color: whitesmoke;
+    
 }
 
-#formContainer{
-    width: 500px;
-    height: 300px;
-    background: #0096c7;
-    margin-top: 150px;
-    margin-left: 300px;
-    padding: 20px;
+/* navigation */
+ /* --To style the Header Navigation*/
+ 
+ .nav-item > a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+
+  }
+
+ .nav-item > a:hover {
     
+    color: chartreuse;
+    
+ }
+ .nav-item >  a:focus{
+    color: red;
+}
+.nav-item > a:active {
+    
+    color: red;
+    
+ }
+
+.navbar {
+  margin-bottom: 0px;
+  padding: 20px;
+  background: #0000FF;
+  color: white;
+
+}
+.navbar-brand {
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 20px;
+}
+ 
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #0000FF;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+
+.navbar-toggler-icon {
+    display: inline; 
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+  
+.navbar img{
+  width: 50px;
+  height: 50px;
+}
+
+.navbar ul{
+  padding:0.3em;
+}
+.navbar ul li{
+  margin-left:0.2em;
+  margin-right: 0.2em;
+
+}
+
+.nav-brand {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* end of navigation */
+
+#formContainer{
+    padding: 20px;
     border-radius: 20px;
 }
 label{
-    color: white;
+  
     float: left;
     width: 100px;
-    padding-right: 20px;
-    width: 100px;
+    
 }
 #values{
     padding-bottom: 20px;
 }
 #header{
     margin-bottom: 20px;
+    
+    
+}
+input{
+    width: 200px;
+    height: 50px;
+    padding-left: 20px;
+    border-top: 0 transparent;
+    border-right: 0 transparent;
+    border-left: #0000FF 5px solid;
+    border-bottom: #0000FF 5px solid ;
+}
+#signIn{
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+    background: #0000FF;
+    color: white;
+}
+#signUp{
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+    background: #0000FF;
     color: white;
 }
 button{
     width: 100px;
     height: 40px;
     font-size: 20px;
-    border-radius: 20px;
+    border-radius: 2px;
     color: blue;
-    margin-left: 300px;
+    margin-left: 00px;
 
 }
 #signout{
