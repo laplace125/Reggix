@@ -1,0 +1,5 @@
+As Teacher:
+sign up - login - start class
+* code is generated (beginning of class), teacher shares to students
+* a second code is generated (5mins to end of class)
+* plus: students reactions in class is recorded (questions asked, number of hands raised, etc etc)

@@ -12,10 +12,18 @@ body{
     
 }
 
+.grid {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
 /* navigation */
  /* --To style the Header Navigation*/
  
- .nav-item > a {
+ /* .nav-item > a {
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     font-weight: bolder;
@@ -88,7 +96,7 @@ body{
 .nav-brand {
   padding: 0px;
   margin: 0px;
-}
+} */
 
 /* end of navigation */
 
@@ -96,6 +104,7 @@ body{
     padding: 20px;
     border-radius: 20px;
 }
+
 label{
   
     float: left;
@@ -118,6 +127,11 @@ input{
     border-right: 0 transparent;
     border-left: #0000FF 5px solid;
     border-bottom: #0000FF 5px solid ;
+    padding-left: 8px;
+    position: relative;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    font-family: CW BR Firma;
 }
 #signIn{
     width: 200px;
